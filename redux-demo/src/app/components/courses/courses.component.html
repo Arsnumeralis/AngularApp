@@ -1,0 +1,20 @@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let course of courses | async, [routerLink]='courses/:id'">
+                <td>{{ course.code }}</td>
+                <td>{{ course.name }}</td>
+                <td>{{ course.date.toLocaleDateString() }}</td>
+                <td>{{ course.duration }}</td>
+            </tr>
+        
+    </tbody>
+</table>

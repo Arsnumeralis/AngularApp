@@ -1,0 +1,44 @@
+precursors
+intro
+templates
+dependency injection
+forms
+http
+routin
+observables and reactive
+redux
+testing
+
+angular app that renders a shopping list
+ultimately want to facilitate dynamic adding of items in a variety of ways
+
+part1 - build an items component that contains a hardcoded list of items, bread cheese wine
+you should render the items as a list. the items component to be rendered as a child of root
+
+part2 - build items pallete component that has a no of buttons for adding various items to the shopping list. when the cheese button is click, then cheese should be added to the list, and the items component should be rerendered. This will req that the item-pallette component pass data to the items component
+
+part3 - mock a rest api using a json server that is used to persist both shopping list and available items
+{
+	"shoppingList: [],
+	"availableItems: []
+}
+Build an ItemService that persists items using your mock rest api. You may want to focus on fetching available items because the shoppoing list will require post
+The smart items component should use service to persist the data and read the data when required.
+
+effectively items that i add to my shopping list should persist between sessions.
+
+Alternatively, you might use local storage instead which is synchronous
+
+
+part4 - build an item form component that might be used either to add items to the shopping list or to add available items. you might choose to reuse this for both cases. it will have to emit events containing the new items which should be handled by smart items component.
+
+part5 - make item service subsribtable so that comp/services outside of shopping list silo can be notified about changes to the lists. your service should emit data on a stream each time something happens. that stream or obs should be made accessible using a get method
+
+could also build a simple component to test subscription and notification functionality. Perhaps a component that renders the number of items in the list.
+
+google how to post for mock json dbs#
+
+
+optional - if the user clicks the same button more than once then you should render a message informing the user that the item has been added.
+
+json-server --watch db.json

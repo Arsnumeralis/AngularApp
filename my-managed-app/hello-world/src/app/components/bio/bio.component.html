@@ -1,0 +1,20 @@
+<h3>My Bio</h3>
+
+<p>{{ message }}</p>
+
+<div *ngIf="bio">
+
+    <p [textContent] = "bio.name"></p>
+    <p>Name: {{ bio.name }}</p>
+    <p *ngIf="bio.employed">I am employed.</p>
+    <p class="mb-0">I know the following programming languages:</p>
+    <ul>
+        <li *ngFor="let language of bio.languages">{{ language }}</li>
+    </ul>
+    <p>My wife's name is {{ family.wife }}, my son and daughter's names are {{ family.son }} and {{ family.daughter }} respectively.</p>
+
+</div>
+
+
+<!-- <button (click)="handleMakeUnemployed()" class="btn btn-primary">Make him unemployed lmao</button>
+<button (click)="handleDivorce()" class="btn btn-primary">Make him divorced lmao</button> -->

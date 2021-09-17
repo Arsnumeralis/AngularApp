@@ -1,0 +1,18 @@
+{
+  "name": "my-managed-app",
+  "version": "1.0.0",
+  "description": "A simple managed app",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "author": "Paulius",
+  "license": "ISC",
+  "dependencies": {
+    "jquerry": "0.0.1-security"
+  },
+  "devDependencies": {
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
+  }
+}

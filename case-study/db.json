@@ -1,0 +1,14 @@
+{
+	"shoppingList": [
+        {
+            "id": 1,
+            "food":"Milk"
+        }
+        "Eggs"
+    ],
+	"availableItems": [
+        "Wine",
+        "Cheese",
+        "Bread"
+    ]
+}

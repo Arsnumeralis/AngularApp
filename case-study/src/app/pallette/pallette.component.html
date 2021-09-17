@@ -1,0 +1,6 @@
+
+<p>Add these items:</p>
+
+<span *ngFor="let item of availableItems">
+    <button (click)="handleAddItem(item)">{{ item }}</button>
+</span>

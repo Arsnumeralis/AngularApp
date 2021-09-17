@@ -1,0 +1,18 @@
+<!-- form group binds to your form group prop in the view model -->
+<form [formGroup]="formGroup" (ngSubmit)="handleSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <!-- form control name maps onto the property name in the form group object -->
+        <input type="text" class="form-control" formControlName="name" />
+        <small *ngIf="nameIsInvalid()" class="text-danger">The name is a required field</small>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Employed</label>
+        <input type="text" class="form-control" formControlName="employed" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Languages</label>
+        <input type="text" class="form-control" formControlName="languages" />
+    </div>
+    <button class="btn btn-primary">Submit</button>
+</form>

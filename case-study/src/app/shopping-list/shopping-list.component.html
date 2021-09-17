@@ -1,0 +1,25 @@
+<h2>I need these items:</h2>
+
+<!--
+    Shopping list is a ref to input in the actual list component, item list expects to receive shopping list as input
+    shoppingList is the name of a prop in this component
+    it is a ref to the data we are passing down to the child.
+-->
+<app-actual-list [shoppingList]="shoppingList"></app-actual-list>
+
+<!--
+    availableItems is a ref to input in the actual list component, item list expects to receive list of available items as input
+    availableItems is the name of a prop in this component
+    it is a ref to the data we are passing down to the child.
+    itemAdded is a ref to an output in the item pallette component
+    that is the item pallette will emit itemAdded events
+
+    "handleItemAdded" is the name of the handler function in this component.
+    it is the means by which the child can pass data to its parents
+-->
+
+<app-pallette 
+    [availableItems]="availableItems"
+    (itemAdded)="handleAddingItem($event)"
+></app-pallette>
+

@@ -1,0 +1,14 @@
+<p>reactive works!</p>
+
+<!-- 
+    the async pipe saves you from having to call then in the case of a promise
+    and call subscribe in the case of an observable
+    this means your props are likely to be promises or observables than actual data.
+ -->
+<p>{{ promise | async }}</p>
+
+<p>{{ observable | async }}</p>
+
+<p>{{ observable2 | async }}</p>
+
+<p>{{ (ObjObs$ | async)?.name }}</p>

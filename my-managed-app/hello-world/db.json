@@ -1,0 +1,12 @@
+{
+    "bio": {
+        "id": 1,
+        "name": "Stuart",
+        "employed": true,
+        "languages": [
+            "Java",
+            "JS",
+            "Python"
+        ]
+    }
+}
